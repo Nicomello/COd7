@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package movie;
+import java.util.Scanner;
+/**
+ *
+ * @author nicolasfontesdemello
+ */
+public class MovieDriver {
+    public static void main(String[] args) {
+// TODO Auto-generated method stub
+Scanner keybord=new Scanner(System.in);
+char ys='y';
+while(ys=='y')
+{
+Movie movie=new Movie();
+System.out.println("Enter the name of the movie : ");
+
+String title= keybord.nextLine();
+
+movie.setTitle(title);
+
+System.out.println("Enter the rating of the movie : ");
+
+String rating= keybord.next();
+
+movie.setRating(rating);
+System.out.println("Enter the number of tickets sold for this movie : ");
+int number= keybord.nextInt();
+
+movie.setSoldTickets(number);
+System.out.println(movie.toString());
+
+System.out.println("Do you want to enter another ?(y or n)");
+ys= keybord.next().charAt(0);
+
+keybord.nextLine();
+
+}
+
+System.out.println("Goodbye!");
+
+
+   }
+}
